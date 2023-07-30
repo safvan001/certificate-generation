@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+      <meta charset="UTF-8">
+    <title></title>
+     <link rel="stylesheet" href="{% static 'CSS/a.css' %}">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:ital,wght@1,600&display=swap">
+
+<style>
+    body {
+    background-image: url("https://wallpaperaccess.com/full/2763034.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* This ensures the entire page height is used for centering */
+}
+
+.menu {
+  width: 400px;
+  height: 10px;
+  margin-top: 200px; /* Adjust this value as needed to move it down */
+  margin-left: 120px;
+  margin-bottom:10px;
+}
+.single-line {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0; /* Remove default margin to avoid any extra spacing */
+  display: inline-block; /* Allows the <h5> to respect the text-align property */
+  font-family: "Arial Black", Arial, sans-serif;
+  font-weight: 600;
+  font-style: italic;
+  color:#6D99BB;
+
+}
+.line {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center; /* Align content (including <h5>) to the right within the container */
+  padding: 20px;
+}
+.custom-font {
+  font-family: Impact, sans-serif;
+  font-weight: semi-bold;
+  color:#3D76A4;
+}
+.btn {
+
+  background-color: #3D76A4;
+  padding: 20px;
+  width: 300px;
+  color: #ffffff;
+  border: 4px double #cccccc;
+  border-radius: 10px;
+  font-size: 15px;
+  font-family: "Arial Black", Arial, sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 1px;
+  -webkit-transition: all 0.5s; /* add this line, chrome, safari, etc */
+  -moz-transition: all 0.5s; /* add this line, firefox */
+  -o-transition: all 0.5s; /* add this line, opera */
+  transition: all 0.5s; /* add this line */
+}
+.btn:hover {
+  background-color: #185F9A; /* Change this to your desired hover color */
+  color:#DDDDDD;
+
+}
+.register {
+  display: block; /* This will make the button appear below the .menu element */
+  margin-left: 120px; /* Use the same margin value as the .menu element if you want to align them horizontally */
+}
+
+
+
+</style>
+</head>
+<body>
+<div class="line">
+    <h2 class="custom-font">CERTIFICATE MAKER</h2><br>
+    <h5 class="single-line">Create stunning certificates for your students or colleagues!</h5>
+</div>
+
+<div class="menu">
+     <form class="container-fluid justify-content-start">
+    <a class="btn"  type="button" href="{% url 'c_validator:create_certificate' %}">GENERATE-CERTIFICATE</a>
+
+  </form>
+
+
+</body>
+</html>
+  {% block content %}
+  {% endblock %}
